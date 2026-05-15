@@ -70,7 +70,7 @@ async def custom_site():
         __import__(__name__).__file__ = main
 
         # now make a prompt
-        msg  = "Ready to start ! Please click/touch page"
+        msg  = "إضغط هنا للبدء | Click to Start"
         platform.window.infobox.innerText = msg
         print("\n"*4, f"    * Waiting for media user engagement. {msg} *" , "\n"*4)
 
@@ -156,9 +156,9 @@ config = {
     cdn : "https://pygame-web.github.io/cdn/0.9.3/",
     autorun : 0,
     PYBUILD : "3.12",
-    fb_ar   :  1.77,
-    fb_width : "1280",
-    fb_height : "720"
+    fb_ar   :  0.66,
+    fb_width : "600",
+    fb_height : "900"
 }
 
 function show_infobox() {
@@ -205,12 +205,18 @@ function show_infobox() {
         }
 
         #infobox {
-            position: fixed; /* center relative to viewport */
-            background: green;
-            color: blue;
+            position: fixed;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
             font-weight: bold;
-            padding: 12px 24px;
- /*           display: none; */
+            font-size: 24px;
+            padding: 20px 40px;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            cursor: pointer;
+            text-align: center;
+            border: 2px solid white;
+            user-select: none;
             z-index: 999999;
         }
         div.emscripten { text-align: center; }
