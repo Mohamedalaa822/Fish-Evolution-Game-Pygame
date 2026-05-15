@@ -70,7 +70,7 @@ async def custom_site():
         __import__(__name__).__file__ = main
 
         # now make a prompt
-        msg  = "Click to Play Fish Evolution"
+        msg  = "PLAY GAME"
         platform.window.infobox.innerText = msg
         print("\n"*4, f"    * Waiting for media user engagement. {msg} *" , "\n"*4)
 
@@ -209,13 +209,13 @@ function show_infobox() {
             background: linear-gradient(135deg, #00c6ff, #0072ff);
             color: white;
             font-weight: bold;
-            font-size: 24px;
-            padding: 20px 40px;
-            border-radius: 50px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            font-size: 28px;
+            padding: 24px 60px;
+            border-radius: 60px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
             cursor: pointer;
             text-align: center;
-            border: 2px solid white;
+            border: 3px solid white;
             user-select: none;
             z-index: 999999;
         }
@@ -245,8 +245,14 @@ function show_infobox() {
         body {
             font-family: arial;
             margin: 0;
-            padding: none;
-            background-color:powderblue;
+            padding: 0;
+            background-color: #000;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .topright{
